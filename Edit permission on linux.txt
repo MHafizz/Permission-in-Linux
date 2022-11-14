@@ -1,0 +1,35 @@
+-- Menampilkan permission yang terdapat pada file
+
+	ls -l [nama file]
+	
+	Contoh	: ls -l var/www/html
+
+	Output	: -rw-r----- 1 pablo pablo    0 Jul 30 16:25 textfile
+	
+	//Terdapat 3 permission read(r), write(w), dan execute(x)
+
+	//simbol - pada awal -rw-r----- mengartikan file, simbol d pada awal mengartikan directory, dan simbol l pada awal mengartika link
+
+	//Urutan simbol setelahnya digunakan untuk menunjukkan pengakses
+
+	//Tiga urutan pertama adalah user(u) dilanjutkan dengan group(g) dan other(o) (uuu ggg ooo)->(rwxrwxrwx) 
+
+
+
+-- Memodifikasi permission file
+
+	//Menambahkan permission
+
+	chmod [pengakses]+[permission] [namafile]
+
+	Contoh : chmod o+r textfile
+
+	Output	: -rw-r--r-- 1 pablo pablo    0 Jul 30 16:30 textfile
+
+	//Menghilangkan permission
+
+	chmod [pengakses]-[permission] [namafile]
+
+	Contoh : chmod o+r textfile
+
+	Output	: -rw-r----- 1 pablo pablo    0 Jul 30 16:30 textfile
